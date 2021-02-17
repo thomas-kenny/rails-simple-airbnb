@@ -18,13 +18,16 @@
 
 <br>
 
-<div class="container justify-content-between d-flex" >
+<div class="container">
 <% @flats.each do |flat| %>
-  <div class="card" >
-    <h4><%= link_to flat.name, flat_path(flat)%></h4>
-    <p><%= flat.description %></p>
-    <p><i class="fas fa-users"></i> <%= flat.number_of_guests %> <i class="fas fa-pound-sign"></i> <%= flat.price_per_night %></p>
+  <div class="cards row justify-content-center">
+    <div class="card-infos">
+      <div>
+        <h4><%= link_to flat.name, flat_path(flat)%></h4>
+        <p><%= flat.description %></p>
+      </div>
+      <p><i class="fas fa-users"></i> <%= flat.number_of_guests %> <i class="fas fa-pound-sign"></i> <%= flat.price_per_night %></p>
+    </div>
   </div>
   <% end %>
 </div>
-
