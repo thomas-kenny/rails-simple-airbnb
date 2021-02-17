@@ -1,0 +1,33 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Our flats", flats_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Edit flat", edit_flat_path(@flat), class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</div>
+<br>
+
+<div class="card">
+  <h4><%= @flat.name %> </h4>
+  <p><%= @flat.address %></p>
+</div>
+
+<br>
+
+<div class="card">
+  <h5>A bit more about this flat...</h5>
+  <p><%= @flat.description %></p>
+</div>
+
+<br>
+
+<div class="card">
+  <h5>Details</h5>
+  <p><%= @flat.description %></p>
+  <p><i class="fas fa-users"></i> <%= @flat.number_of_guests %> <i class="fas fa-pound-sign"></i> <%= @flat.price_per_night %></p>
+</div>
